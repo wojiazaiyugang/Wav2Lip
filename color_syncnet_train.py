@@ -15,7 +15,8 @@ from glob import glob
 
 import os, random, cv2, argparse
 from hparams import hparams, get_image_list
-
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
 parser = argparse.ArgumentParser(description='Code to train the expert lip-sync discriminator')
 
 parser.add_argument("--data_root", help="Root folder of the preprocessed LRS2 dataset", required=True)
